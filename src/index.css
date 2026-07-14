@@ -1,0 +1,224 @@
+/* ========================================
+   DESIGN TOKENS — Cream × Black (Majd Style)
+   ======================================== */
+:root {
+  /* ── Palette ── */
+  --cream:        #EDEAE3;   /* warm linen — main bg          */
+  --cream-light:  #F4F1EA;   /* slightly lighter cream         */
+  --cream-dark:   #E0DDD6;   /* slightly darker for surfaces   */
+  --black:        #111110;   /* near-black — main text         */
+  --black-mid:    #2A2A28;   /* cards, secondary dark          */
+  --off-white:    #F9F7F2;   /* cards on cream bg              */
+  --red:          #E8274B;   /* single accent — used sparingly */
+
+  /* ── Semantic aliases ── */
+  --bg:           var(--cream);
+  --bg-2:         var(--cream-light);
+  --bg-3:         var(--cream-dark);
+  --surface:      var(--off-white);
+  --surface-dark: var(--black);
+
+  --border:       rgba(17, 17, 16, 0.10);
+  --border-hover: rgba(17, 17, 16, 0.25);
+
+  --text-primary:  var(--black);
+  --text-secondary:rgba(17, 17, 16, 0.55);
+  --text-muted:    rgba(17, 17, 16, 0.35);
+
+  /* Dark-surface text */
+  --text-on-dark:       #F4F1EA;
+  --text-on-dark-muted: rgba(244,241,234,0.50);
+
+  --accent:       var(--black);
+  --accent-2:     var(--black-mid);
+
+  /* ── Typography ── */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* ── Shape ── */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  24px;
+  --radius-pill:100px;
+
+  /* ── Motion ── */
+  --transition:      0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 0.18s ease;
+}
+
+/* ========================================
+   RESET
+   ======================================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: auto; font-size: 16px; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* subtle grain texture */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+a   { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; }
+ul  { list-style: none; }
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+.font-display { font-family: var(--font-display); }
+
+.heading-display {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 14vw, 11rem);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.heading-xl {
+  font-family: var(--font-heading);
+  font-size: clamp(2.75rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.heading-lg {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.heading-md {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section { padding: 7rem 0; }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--text-muted);
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--black);
+  color: var(--cream);
+}
+.btn-primary:hover {
+  background: var(--black-mid);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.btn-outline:hover {
+  background: var(--cream-dark);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.btn-red {
+  background: var(--red);
+  color: #fff;
+  border: 1px solid var(--red);
+}
+.btn-red:hover {
+  background: #d11f3f;
+  border-color: #d11f3f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 39, 75, 0.2);
+}
+
+.btn-dark-outline {
+  background: transparent;
+  color: var(--text-on-dark);
+  border: 1px solid rgba(244,241,234,0.25);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+.btn-dark-outline:hover {
+  background: rgba(244,241,234,0.1);
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+::-webkit-scrollbar         { width: 4px; }
+::-webkit-scrollbar-track   { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb   { background: rgba(17,17,16,0.2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(17,17,16,0.4); }
+
+/* ========================================
+   SELECTION
+   ======================================== */
+::selection { background: var(--black); color: var(--cream); }
+
+/* ========================================
+   DARK SECTION (footer, contrast)
+   ======================================== */
+.dark-section {
+  background: var(--black);
+  color: var(--text-on-dark);
+}
