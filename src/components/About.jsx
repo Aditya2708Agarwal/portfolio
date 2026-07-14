@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import './About.css'
-import aboutImage from '../../IMG-20230927-WA0019.png'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -69,10 +68,12 @@ export default function About() {
             <div className="about__avatar">
               {!imgError ? (
                 <img 
-                  src={aboutImage} 
+                  src="/about-photo.jpg" 
                   alt="Aditya Agarwal" 
                   className="about__avatar-img"
                   onError={() => setImgError(true)}
+                  loading="lazy"
+                  decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                 />
               ) : (
@@ -91,7 +92,7 @@ export default function About() {
               </div>
               {imgError && (
                 <span style={{ fontSize: '0.65rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.5rem' }}>
-                  Add photo to the workspace root as <code>IMG-20230927-WA0019.png</code>
+                  Add photo to <code>public/about-photo.jpg</code>
                 </span>
               )}
             </div>

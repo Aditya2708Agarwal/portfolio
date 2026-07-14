@@ -38,7 +38,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copy">© {year} Aditya Agarwal. All rights reserved.</p>
-          <p className="footer__made">Built with React + Framer Motion ❤️</p>
+          
         </div>
       </div>
     </footer>
