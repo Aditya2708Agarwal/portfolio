@@ -16,8 +16,8 @@ const projects = [
     description:
       'Integrated Google Gemini API to automatically calculate macronutrients from natural language food inputs. Implemented Supabase authentication and PostgreSQL for secure, scalable user data and meal history storage. Developed interactive UI visualizations including charts and progress bars to monitor daily fitness goals.',
     tags: ['React', 'Gemini API', 'Supabase', 'PostgreSQL', 'shadcn/ui'],
-    github: 'https://github.com/Aditya2708Agarwal',
-    live: 'https://github.com/Aditya2708Agarwal',
+    github: 'https://github.com/Aditya2708Agarwal/AI-Fitness-Tracker',
+    live: 'https://github.com/Aditya2708Agarwal/AI-Fitness-Tracker',
     color: '#E8274B',
     image: '/projects/project1.png',
   },
@@ -27,8 +27,8 @@ const projects = [
     description:
       'Built a real-time chat system using Socket.IO for instant bidirectional communication between users. Designed RESTful APIs for user authentication, message persistence, and conversation management. Implemented modular React architecture with custom hooks for scalable state and socket event handling.',
     tags: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO'],
-    github: 'https://github.com/Aditya2708Agarwal',
-    live: 'https://github.com/Aditya2708Agarwal',
+    github: 'https://github.com/Aditya2708Agarwal/OneConnect-Chat-App',
+    live: 'https://oneconnect-chat-app.onrender.com/',
     color: '#FF6B86',
     image: '/projects/project2.png',
   },
@@ -38,8 +38,8 @@ const projects = [
     description:
       'Developed real-time collaborative study rooms and live chat using Socket.IO with JWT-based authentication. Built room management, authentication, and session tracking REST APIs with Express.js and MongoDB. Designed a fully responsive UI with React, TailwindCSS, and shadcn/ui with persistent Pomodoro study timers.',
     tags: ['React', 'Vite', 'TailwindCSS', 'shadcn/ui', 'Socket.IO', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
-    github: 'https://github.com/Aditya2708Agarwal',
-    live: 'https://github.com/Aditya2708Agarwal',
+    github: 'https://github.com/Aditya2708Agarwal/BrainSync',
+    live: 'https://brainsyncaditya.netlify.app/',
     color: '#E8274B',
     image: '/projects/project3.png',
   },
@@ -49,7 +49,7 @@ const projects = [
     description:
       'A responsive weather application that delivers real-time weather forecasts and details using external APIs. Features interactive search and beautiful weather-based themes.',
     tags: ['React', 'Weather API', 'Netlify'],
-    github: 'https://github.com/Aditya2708Agarwal',
+    github: 'https://github.com/Aditya2708Agarwal/weather-app',
     live: 'https://weatherapp-aditya.netlify.app/',
     color: '#FF6B86',
     image: '/projects/project4.png',
