@@ -1,20 +1,21 @@
-/* ========================================
-   DESIGN TOKENS — Cream × Black (Majd Style)
-   ======================================== */
+
 :root {
   /* ── Palette ── */
-  --cream:        #EDEAE3;   /* warm linen — main bg          */
-  --cream-light:  #F4F1EA;   /* slightly lighter cream         */
-  --cream-dark:   #E0DDD6;   /* slightly darker for surfaces   */
+  --beige:        #F5F0E6;   /* warm beige — main bg          */
+  --beige-light:  #FAF6F0;   /* slightly lighter beige        */
+  --beige-dark:   #E8E0D0;   /* slightly darker for surfaces  */
+  --cream:        var(--beige);
+  --cream-light:  var(--beige-light);
+  --cream-dark:   var(--beige-dark);
   --black:        #111110;   /* near-black — main text         */
   --black-mid:    #2A2A28;   /* cards, secondary dark          */
-  --off-white:    #F9F7F2;   /* cards on cream bg              */
+  --off-white:    #FAF8F4;   /* cards on beige bg              */
   --red:          #E8274B;   /* single accent — used sparingly */
 
   /* ── Semantic aliases ── */
-  --bg:           var(--cream);
-  --bg-2:         var(--cream-light);
-  --bg-3:         var(--cream-dark);
+  --bg:           var(--beige);
+  --bg-2:         var(--beige-light);
+  --bg-3:         var(--beige-dark);
   --surface:      var(--off-white);
   --surface-dark: var(--black);
 
